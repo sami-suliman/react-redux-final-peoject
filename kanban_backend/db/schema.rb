@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_152530) do
+ActiveRecord::Schema.define(version: 2020_03_09_163104) do
 
   create_table "orders", force: :cascade do |t|
     t.datetime "order_date"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_03_09_152530) do
     t.boolean "picked"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "order_id"
   end
 
 end
