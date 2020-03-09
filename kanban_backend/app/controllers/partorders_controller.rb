@@ -1,0 +1,2 @@
+class PartordersController < ApplicationController
+end

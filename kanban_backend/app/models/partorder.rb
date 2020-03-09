@@ -1,0 +1,2 @@
+class Partorder < ApplicationRecord
+end
