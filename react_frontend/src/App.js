@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './stylesheets/App.css';
 import Home from './containers/Home'
 import OrdersContainer from './containers/OrdersContainer'
+import OrderInput from './components/order/OrderInput'
 import Navigation from './components/Navigation'
 import { connect } from 'react-redux'
 
@@ -15,8 +16,9 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/orders' component={OrdersContainer} />
+        <Route exact path='/orders/new' component={OrderInput} />
       </Switch>
-      <OrdersContainer />
+      {/* <OrdersContainer /> */}
     </div>
     </Router>
   );

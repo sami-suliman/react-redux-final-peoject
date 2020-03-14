@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchOrders } from '../actions/OrdersActions'
 import Parts from '../components/parts/Parts';
+import PartInput from '../components/parts/PartInput';
 
 
 class PartsContainer extends Component {
@@ -13,16 +14,16 @@ class PartsContainer extends Component {
   render(){
     return(
       <div>
-        {/* <PartInput
+        <PartInput
           order={this.props.order}
-          /> */}
+          />
 
-        <strong>Order Parts:</strong>
+        {/* <strong>Order Parts:</strong>
         <Parts
           key={this.props.order.id}
           parts={this.props.order.parts}
           order={this.props.order}
-        />
+        /> */}
         </div>
     )
   }

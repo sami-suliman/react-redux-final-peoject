@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { Card, Button, Grid } from 'semantic-ui-react';
 import { connect } from 'react-redux'
 import PartsContainer from '../../containers/PartsContainer'
-// import { deleteOrder } from '../../actions/OrdersActions'
+import { deleteOrder } from '../../actions/OrdersActions'
 import Part from '../parts/Part'
 
 
   class Order extends Component {
-    // handleClick(){
-    //   this.props.deleteOrder(this.props.order.id)
-    // }
+    handleClick(){
+      this.props.deleteOrder(this.props.order.id)
+    }
 
     render(){
       // debugger
@@ -22,7 +22,8 @@ import Part from '../parts/Part'
           <h4>Operator: {order.user_name}</h4>
           <h3>Parts Order </h3>
           <h4>{partsOrder}</h4>
-          <hr></hr>
+          <Button basic variant="primary" onClick={ () => this.handleClick() }>Delete order</Button>          
+          <PartsContainer order={order}/>
         </div>
 
         
@@ -49,5 +50,5 @@ import Part from '../parts/Part'
     }
   }
 
-  // export default connect(null, { deleteOrder })(Order);
-  export default connect(null, {  })(Order);
+  export default connect(null, { deleteOrder })(Order);
+  // export default connect(null, {  })(Order);

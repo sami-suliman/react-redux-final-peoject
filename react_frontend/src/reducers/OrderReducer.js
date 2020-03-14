@@ -19,9 +19,14 @@ export default function orderReducer(state = {
         case 'DELETE_ORDER':
           return{...state, loading: false, orders: state.orders.filter(order => order.id !== action.payload.id)}
         case 'FETCH_PARTS':
-          return {...state, parts: action.payload.parts}
+          return {
+            ...state,
+             loading: false,
+             parts: action.payload
+            }
         case 'LOADING_PARTS':
           return {...state, loading: true}
+        
 
         case 'CREATE_PART':
           newOrder = {...action.payload.order, parts: [...action.payload.order.parts, action.payload.part]}

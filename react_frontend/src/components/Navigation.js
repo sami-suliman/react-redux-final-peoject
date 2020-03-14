@@ -31,6 +31,16 @@ const Navigation = () => (
             }}
         >
         Orders</NavLink>
+
+        <NavLink
+            to="/orders/new"
+            exact
+            style={link}
+            activeStyle={{
+                background: 'gray'
+            }}
+        >
+        New Order</NavLink>
     </div>
 )
 

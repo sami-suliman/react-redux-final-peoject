@@ -16,6 +16,7 @@ class Orders extends Component {
     return (
       <ul>
         <h2 className="orderIndex">Orders List:</h2>
+        <hr></hr>
         {ordersIndex}
       </ul>
     )

@@ -4,7 +4,7 @@ import Part from './Part'
 
 class Parts extends Component {
   render() {
-      debugger
+      // debugger
     const { parts, order } = this.props
 
     const partList = parts.map((part, index) => {
