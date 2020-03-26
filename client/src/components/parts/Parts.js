@@ -1,0 +1,36 @@
+import React, { Component } from "react";
+import Part from "./Part";
+import { connect } from "react-redux";
+import { fetchParts } from "../../actions/partsActions";
+
+class Parts extends Component {
+  componentDidMount() {
+    this.props.fetchParts();
+    // debugger;
+  }
+  render() {
+    // debugger;
+    const { parts, order } = this.props;
+
+    const partList = this.props.parts.map(part => {
+      return <Part key={part.id} id={part.id} part={part} />;
+    });
+
+    return (
+      <div>
+        <h3>Parts Not Picked List</h3>
+        <ul>{partList}</ul>
+      </div>
+    );
+  }
+}
+// const mapStateToProps = state => {
+//   // debugger;
+//   return {
+//     // parts: state.filter(part => !part.picked)
+//     orders: state.orderReducer.orders
+//   };
+// };
+
+export default connect(null, { fetchParts })(Parts);
+// export default Parts;

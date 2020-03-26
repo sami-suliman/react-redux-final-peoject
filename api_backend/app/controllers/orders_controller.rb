@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
     end 
     
     def create
-        
+        # binding.pry
         @order = Order.new(order_params)
         if @order.save
             render json: @order
@@ -49,7 +49,7 @@ class OrdersController < ApplicationController
     end 
 
     def find_order
-        @order = order.find(params[:id])
+        @order = Order.find(params[:id])
     end
 
 end
